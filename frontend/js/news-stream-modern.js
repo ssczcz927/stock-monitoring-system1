@@ -44,7 +44,7 @@ class ModernNewsStream {
         this.showLoading(true);
         
         try {
-            const baseUrl = window.location.origin.includes('localhost') ? 'http://localhost:8090' : window.location.origin;
+            const baseUrl = 'http://localhost:5000';
             const response = await fetch(`${baseUrl}/api/news/flat/${page}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

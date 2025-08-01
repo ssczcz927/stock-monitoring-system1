@@ -43,7 +43,7 @@ class SimpleNewsStream {
                 this.hasMore = true;
             }
             
-            const baseUrl = window.location.origin.includes('localhost') ? 'http://localhost:8085' : window.location.origin;
+            const baseUrl = 'http://localhost:5000';
             const response = await fetch(`${baseUrl}/api/news/flat/${this.currentPage}`);
             const data = await response.json();
             

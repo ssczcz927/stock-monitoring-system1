@@ -46,7 +46,7 @@ class NewsStream {
                 return;
             }
             
-            const baseUrl = window.location.origin.includes('localhost') ? 'http://localhost:8090' : window.location.origin;
+            const baseUrl = 'http://localhost:5000';
             const response = await fetch(`${baseUrl}/api/news/flat/${page}`);
             const data = await response.json();
             
@@ -73,7 +73,7 @@ class NewsStream {
         if (this.preloadCache.has(page)) return;
         
         try {
-            const baseUrl = window.location.origin.includes('localhost') ? 'http://localhost:8090' : window.location.origin;
+            const baseUrl = 'http://localhost:5000';
             const response = await fetch(`${baseUrl}/api/news/flat/${page}`);
             const data = await response.json();
             this.preloadCache.set(page, data.news);

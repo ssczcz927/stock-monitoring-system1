@@ -1,7 +1,7 @@
 // 股票监控系统前端JavaScript
 class StockMonitor {
     constructor() {
-        this.apiBase = window.location.origin.includes('localhost') ? 'http://localhost:8090/api' : '/api';
+        this.apiBase = 'http://localhost:5000/api';
         this.updateInterval = 60000; // 60秒更新一次
         this.updateTimer = null;
         this.init();
